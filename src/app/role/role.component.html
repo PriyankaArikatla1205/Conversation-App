@@ -1,0 +1,18 @@
+<mat-card fxLayout="column" fxLayoutAlign="center center" class="card">
+    <h1 class="language"> Select the Role You Play</h1>
+  <div fxLyout="column" fxLayoutAlign="space-evenly center" class="fullwidth">
+      <span >
+
+        <mat-radio-group class="button" >
+            <mat-radio-button  class="marg" *ngFor="let datasetType of datasetTypes$ | async" [value]="datasetType.name">
+              {{datasetType.display_name}} </mat-radio-button>
+           
+            <button [routerLink]="['/cn']"  [disabled] ="selected_type" class="button1" mat-raised-button color="primary">Continue</button>
+          </mat-radio-group>
+      
+          
+      </span>
+      
+     
+  </div>
+</mat-card>

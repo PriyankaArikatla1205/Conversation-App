@@ -1,0 +1,34 @@
+.card{
+    width: 600px;
+    height: 400px;
+    align-self: center; 
+    background-color:rgb(78 93 230);
+     margin: 150px;
+  margin-left: 15%;
+ 
+
+ 
+
+    
+
+}
+
+
+
+.button{
+    color: white;
+    display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+  
+  
+}
+
+.language{
+color:white;
+top:50%;
+}
+.lang{
+    color: white;
+}
