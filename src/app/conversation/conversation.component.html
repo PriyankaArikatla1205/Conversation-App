@@ -6,11 +6,20 @@
 
 
 <div class="conversation" >
-  <div class="personA">
-    <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\female.jpeg" alt="PersonA" style="width:100%;">
+  <div *ngFor="let datasetType of datasetTypes$ | async">
+    <div  class = "personA" *ngIf= "datasetType.Person =='A';else PersonB">
+   {{datasetType.text}}
+  </div>
+ 
+  <ng-template #PersonB >  
+    <div class="personB darker">
+      {{datasetType.text}} </div> 
+  </ng-template>
+
+    <!-- <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\female.jpeg" alt="PersonA" style="width:100%;">
     <p *ngFor="let datasetType of datasetTypes$ | async">
       {{datasetType.text}}</p>
-  </div>
+  </div> -->
   <!-- <div class="personB darker">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\male.jpeg" alt="PersonB" class="right" style="width:100%;">
     <p>Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine.
