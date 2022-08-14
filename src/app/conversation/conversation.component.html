@@ -8,9 +8,10 @@
 <div class="conversation" >
   <div class="personA">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\female.jpeg" alt="PersonA" style="width:100%;">
-    <p>Hello. How are you today?</p>
+    <p *ngFor="let datasetType of datasetTypes$ | async">
+      {{datasetType.text}}</p>
   </div>
-  <div class="personB darker">
+  <!-- <div class="personB darker">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\male.jpeg" alt="PersonB" class="right" style="width:100%;">
     <p>Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine.
       Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for
@@ -31,11 +32,10 @@
   </div>
   <div class="personB darker">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\male.jpeg" alt="PersonB" class="right" style="width:100%;">
-    <p>Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine.
-      Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for
-      asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!</p>
+    <p *ngFor="let datasetType of datasetTypes$ | async">
+      {{datasetType.text}}</p>
   </div>
-  <div class="personA">
+<div class="personA">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\female.jpeg" alt="PersonA" style="width:100%;">
     <p>Hello. How are you today?</p>
   </div>
@@ -44,7 +44,7 @@
     <p>Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine.
       Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for
       asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!</p>
-  </div>
+  </div> --> 
 </div>
 
 <div class="container">

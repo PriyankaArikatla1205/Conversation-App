@@ -10,7 +10,7 @@ export interface DataSetType {
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class Data1Service {
 
   constructor(private http:HttpClient) { }
 
