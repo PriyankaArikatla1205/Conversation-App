@@ -1,18 +1,15 @@
 .progress{
-  width: 90%;
   height: 6px;
-  margin-left: 45px;
   border-radius: 10px;
 
 }
 button{
-margin-top: 0%;
-margin-left:96%;
+  float: right;
 }
 .conversation{
   margin: 2% 2% 5% 2%;
   height: 75vh;
-  border:1px solid grey;
+  box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   background-color: #e0e1e4;
   border-radius: 10px;
   padding: 20px;
