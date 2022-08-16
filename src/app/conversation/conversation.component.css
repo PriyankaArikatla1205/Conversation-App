@@ -1,15 +1,21 @@
-.progress{
-  width: 90%;
-  height: 6px;
-  margin-left: 45px;
-  border-radius: 10px;
 
+::ng-deep .mat-progress-bar-fill::after {
+  background-color:rgb(78, 209, 78);
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+  border-radius: 2px;
+  margin-top: 1%;
 }
 button{
 float:right;
 }
 .conversation{
-  margin: 2% 2% 5% 2%;
+  margin: 5% 2% 5% 2%;
   height: 75vh;
 
 }
@@ -34,24 +40,7 @@ float:right;
   border-color: #ccc;
   background-color: #ddd;
 }
-.personA::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.personA img {
-  float: left;
-  max-width: 60px;
-  width: 100%;
-  margin-right: 20px;
-  border-radius: 50%;
-}
-.personB img {
-  float: left;
-  margin-left: 20px;
-  margin-right:0;
-  border-radius: 50%;
-}
+
 .container{
   display: flex;
   position: fixed;
