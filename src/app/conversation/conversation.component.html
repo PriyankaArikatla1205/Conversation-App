@@ -1,16 +1,26 @@
-<button mat-icon-button color="accent" class="material-symbols-outlined"
+<!-- <button mat-icon-button color="accent" class="material-symbols-outlined"
   aria-label="Example icon button with a home icon">
   <mat-icon>close</mat-icon>
-</button>
+</button> -->
 <mat-progress-bar mode="determinate" value="40" class="progress"></mat-progress-bar>
 
 
 <div class="conversation" >
-  <div class="personA">
-    <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\female.jpeg" alt="PersonA" style="width:100%;">
-    <p>Hello. How are you today?</p>
+  <div *ngFor="let datasetType of datasetTypes$ | async">
+    <div  class = "personA" *ngIf= "datasetType.Person =='A';else PersonB">
+   {{datasetType.text}}
   </div>
-  <div class="personB darker">
+ 
+  <ng-template #PersonB >  
+    <div class="personB darker">
+      {{datasetType.text}} </div> 
+  </ng-template>
+
+    <!-- <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\female.jpeg" alt="PersonA" style="width:100%;">
+    <p *ngFor="let datasetType of datasetTypes$ | async">
+      {{datasetType.text}}</p>
+  </div> -->
+  <!-- <div class="personB darker">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\male.jpeg" alt="PersonB" class="right" style="width:100%;">
     <p>Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine.
       Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for
@@ -31,11 +41,10 @@
   </div>
   <div class="personB darker">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\male.jpeg" alt="PersonB" class="right" style="width:100%;">
-    <p>Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine.
-      Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for
-      asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!</p>
+    <p *ngFor="let datasetType of datasetTypes$ | async">
+      {{datasetType.text}}</p>
   </div>
-  <div class="personA">
+<div class="personA">
     <img src="E:\Next Gen Internship\angular\Conversation-App\src\assets\female.jpeg" alt="PersonA" style="width:100%;">
     <p>Hello. How are you today?</p>
   </div>
@@ -44,14 +53,12 @@
     <p>Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine.
       Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for
       asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!</p>
-  </div>
+  </div> --> 
 </div>
 
 <div class="container">
   <div class="mentor">mentor</div>
   <div class="recorder">
-    <button mat-icon-button color="accent" id="icon1" class="material-symbols-outlined">
-      <mat-icon>next</mat-icon>
-    </button>
+  
   </div>
 </div>
