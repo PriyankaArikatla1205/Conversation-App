@@ -18,6 +18,7 @@ import { LessonDescriptionComponent } from './lesson-description/lesson-descript
 import { ConversationComponent } from './conversation/conversation.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { XttpInterceptorInterceptor } from './xttp-interceptor.interceptor';
+import { LessonsComponent } from './lessons/lessons.component';
 
 
 
@@ -29,6 +30,7 @@ import { XttpInterceptorInterceptor } from './xttp-interceptor.interceptor';
     RoleComponent,
     LessonDescriptionComponent,
     ConversationComponent,
+    LessonsComponent,
    
    
   

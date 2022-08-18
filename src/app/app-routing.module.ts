@@ -4,6 +4,7 @@ import { LanguageComponent } from './language/language.component';
 import { RoleComponent } from './role/role.component';
 import { LessonDescriptionComponent } from './lesson-description/lesson-description.component';
 import { ConversationComponent } from './conversation/conversation.component';
+import { LessonsComponent } from './lessons/lessons.component';
 
 const routes: Routes = [{ 
   path:"l",
@@ -22,6 +23,14 @@ const routes: Routes = [{
   path:"cn",
   component: ConversationComponent
 },
+ 
+ 
+{ 
+  path:"lessons",
+  component: LessonsComponent
+},
+ 
+ 
 
 ];
 
