@@ -2,10 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-export interface DataSetType {
-Person: string;
- text : string;
-}
+// export interface DataSetType {
+// Person: string;
+//  text : string;
+// }
 @Injectable({
   providedIn: 'root'
 })
@@ -13,8 +13,12 @@ Person: string;
 export class ConversationService {
 
   constructor(private http:HttpClient) {}
-    getDatasetTypes(): Observable<Array<DataSetType>> {
-      return  this.http.get<Array<DataSetType>>("assets/conf/dataset_types2.json");
+  activity(): Observable<any> {
+    return this.http.get<any>("https://backend.skill2030.com/asees/activities?id=2965");
+  }
+   
     
    }
-}
+
+
+
